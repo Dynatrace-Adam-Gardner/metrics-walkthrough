@@ -20,7 +20,7 @@ Scroll down to `Metrics` and choose the POST endpoint.
 
 Click the padlock and use your API key to authenticate.
 
-Click `Try it out` and use this payload:
+Click `Try it out` and use this payload (changing `YOURNAME` of course):
 
 ```
 YOURNAME.cpu.temperature,cpu.id=0 42
