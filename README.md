@@ -81,3 +81,7 @@ response = requests.post("https://***.live.dynatrace.com/api/v2/metrics/ingest",
 print(response.status_code)
 print(response.text)
 ```
+
+# Further Reading
+
+Ability to create custom topology (relationships) between metrics: `https://www.dynatrace.com/support/help/shortlink/topology-model#custom-topology-model`
