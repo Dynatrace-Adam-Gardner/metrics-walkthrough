@@ -66,17 +66,21 @@ Create a python file with the following content (change `YOUR_NAME`):
 ```
 import requests
 
-YOUR_NAME = "***"
+# Change these to match your details
+YOUR_NAME = "***" # Without spaces eg. AdamGardner
+DT_TENANT_API_URL = "https://abc123.live.dynatrace.com/api"
+API_TOKEN = "dtc01.****"
+# Do not change anything below this line
 
 headers = {
-  "Authorization": "Api-token dtc01.***"
+  "Authorization": f"Api-token dtc01.{API_TOKEN}"
 }
 
 payload = f"""{YOUR_NAME}.cpu.temperature,cpu.id=0 20
 bob.cpu.temperature,cpu.id=1 39
 """
 
-response = requests.post("https://***.live.dynatrace.com/api/v2/metrics/ingest", headers=headers, data=payload)
+response = requests.post(f"{DT_TENANT_API_URL}/v2/metrics/ingest", headers=headers, data=payload)
 
 print(response.status_code)
 print(response.text)
